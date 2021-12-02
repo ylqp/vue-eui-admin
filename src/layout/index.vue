@@ -7,18 +7,21 @@
         <header>
           <Navbar />
         </header>
+        <app-main />
         <footer>底部版权111111111</footer>
     </div>
   </div>
 </template>
 <script>
-import { Sidebar, Navbar } from "./components";
+import { Sidebar, Navbar} from "./components";
 import variables from "@/styles/variables.scss";
+import AppMain from './components/AppMain.vue';
 export default {
   name: "Layout",
   components: {
     Sidebar,
     Navbar,
+    AppMain,
   },
   data() {
     return {
@@ -40,7 +43,6 @@ export default {
   }
   .main-container {
     flex: 1;
-    background-color: #ccc;
   }
 }
 </style>

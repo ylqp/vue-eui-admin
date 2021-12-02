@@ -10,6 +10,7 @@
         :text-color="variables.menuText"
         :active-text-color="variables.menuActiveText"
       >
+        <sidebar-item />
         <el-submenu index="1">
           <template slot="title">
             <i class="el-icon-location"></i>
@@ -65,11 +66,12 @@
   </div>
 </template>
 <script>
-import variables from "@/styles/variables.scss";
-import { mapGetters } from 'vuex';
+import variables from "@/styles/variables.scss"
+import { mapGetters } from 'vuex'
+import SidebarItem from './SidebarItem.vue'
 export default {
   name: "SideBar",
-  components: {},
+  components: {SidebarItem},
   props: {
   },
   data() {
