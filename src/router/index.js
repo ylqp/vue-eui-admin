@@ -38,13 +38,9 @@ export const constantRoutes = [
     path: '/',
     name: 'Home',
     component: Layout,
-    redirect: '/test',
-    children: [
-      {
-        path: 'test',
-        component: () => import('@/views/test.vue')
-      }
-    ]
+    // meta: {
+    //   title: 'ddd'
+    // }
   },
   {
     path: '/404',
@@ -95,10 +91,16 @@ export const constantRoutes = [
     redirect: '/zip/download',
     alwaysShow: true,
     name: 'Zip',
-    meta: { title: 'Zip', icon: 'zip' },
+    meta: { title: 'Zip', icon: 'el-icon-location' },
     children: [
       {
         path: 'download',
+        component: () => import('@/views/zip/index'),
+        name: 'ExportZip',
+        meta: { title: 'Export Zip' }
+      },
+      {
+        path: 'aaa',
         component: () => import('@/views/zip/index'),
         name: 'ExportZip',
         meta: { title: 'Export Zip' }
@@ -121,7 +123,8 @@ export const constantRoutes = [
 ]
 
 const router = new VueRouter({
-  constantRoutes
+  mode: 'hash',
+  routes: constantRoutes
 })
 
 export default router

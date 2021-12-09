@@ -1,6 +1,6 @@
 <template>
   <div class="search">
-    <i>111</i>
+    <svg-icon class-name="search-icon" icon-class="search" @click.stop="click" />
   </div>
 </template>
 

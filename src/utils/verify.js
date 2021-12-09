@@ -65,6 +65,7 @@ export function checkIdNumber(value) {
 }
 
 /**
+ * 外链验证
  * @param {string} path
  * @returns {Boolean}
  */

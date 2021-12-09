@@ -1,6 +1,6 @@
 <template>
   <div>
-    zip
+    zipff
   </div>
 </template>
 
