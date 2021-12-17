@@ -120,6 +120,16 @@ export const constantRoutes = [
       }
     ]
   },
+  {
+    path: 'external-link',
+    component: Layout,
+    children: [
+      {
+        path: 'http://172.16.6.130:8080/oxer/OTS-TeaLogin.html?tenant=cate',
+        meta: { title: 'External Link', icon: 'link' }
+      }
+    ]
+  }
 ]
 
 const router = new VueRouter({
