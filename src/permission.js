@@ -15,7 +15,7 @@ store.dispatch('permission/generateRoutes', '').then(() => {
   
 })
 
-router.beforeEach((to, form, next) => {
+router.beforeEach(async(to, form, next) => {
   
   // start progress bar
   NProgress.start()
