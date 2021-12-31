@@ -89,7 +89,8 @@ export default {
           this.redirect = query.redirect
           this.otherQuery = this.getOtherQuery(query)
         }
-      }
+      },
+      immediate: true
     }
   },
   methods: {

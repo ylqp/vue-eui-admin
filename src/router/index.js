@@ -41,6 +41,7 @@ export const constantRoutes = [
   },
   {
     path: '/',
+    // redirect: 'home',
     name: 'Home',
     component: Layout,
     // meta: {

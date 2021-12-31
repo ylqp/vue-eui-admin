@@ -11,7 +11,7 @@ NProgress.configure({ showSpinner: false }) // NProgress Configuration
 const whiteList = ['/login', '/auth-redirect']
 
 store.dispatch('permission/generateRoutes', '').then(() => {
-  console.log('初始化菜单')
+  // console.log('初始化菜单')
   
 })
 
@@ -69,9 +69,9 @@ router.beforeEach(async(to, form, next) => {
       NProgress.done()
     }
   }
-  next()
 })
 router.afterEach(() => {
   // finish progress bar
   NProgress.done()
 })
+
