@@ -1,3 +1,11 @@
 module.exports = {
-  title: 'vae'
+  title: 'vae',
+  
+  showSettings: true,
+
+  tagsView: true,
+
+  fixedHeader: false,
+
+  sidebarLogo: false,
 }

@@ -10,11 +10,6 @@ NProgress.configure({ showSpinner: false }) // NProgress Configuration
 
 const whiteList = ['/login', '/auth-redirect']
 
-store.dispatch('permission/generateRoutes', '').then(() => {
-  // console.log('初始化菜单')
-  
-})
-
 router.beforeEach(async(to, form, next) => {
   
   // start progress bar
@@ -25,7 +20,7 @@ router.beforeEach(async(to, form, next) => {
 
   // determine 确定 whether 是否 the user has logged in
   const hasToken = getToken()
-
+  // 1.判断token
   if (hasToken) {
     if (to.path === '/login') {
       // if is logged in, redirect to the home page
@@ -34,16 +29,17 @@ router.beforeEach(async(to, form, next) => {
     } else {
       // 判断权限
       const hasRoles = store.getters.roles && store.getters.roles.length > 0
+      console.log(hasRoles + '------------------' + to.path)
       if (hasRoles) {
         next()
       } else {
         try {
           // get user info
           const { roles } = await store.dispatch('user/getInfo')
-
+          console.log('当前角色', roles)
           // generate accessible routes map based on roles
           const accessRoutes = await store.dispatch('permission/generateRoutes', roles)
-
+          console.log(accessRoutes)
           // dynamically add accessible routes
           router.addRoutes(accessRoutes)
 

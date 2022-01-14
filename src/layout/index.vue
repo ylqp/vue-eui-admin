@@ -8,17 +8,23 @@
           <Navbar />
         </header>
         <app-main />
-        <footer>底部版权111111111</footer>
+        <right-panel>
+          <settings />
+        </right-panel>
     </div>
   </div>
 </template>
 <script>
 import { Sidebar, Navbar} from "./components";
+import RightPanel from '@/components/RightPanel'
 import variables from "@/styles/variables.scss";
 import AppMain from './components/AppMain.vue';
+import Settings from './components/Settings'
 export default {
   name: "Layout",
   components: {
+    Settings,
+    RightPanel,
     Sidebar,
     Navbar,
     AppMain,

@@ -1,6 +1,6 @@
 <template>
   <div v-if="!item.hidden">
-    <template v-if="hasOneShowingChild(item.children, item)">
+    <template v-if="hasOneShowingChild(item.children, item) && !item.alwaysShow">
       <app-link v-if="onlyOneChild.meta" :to="resolvePath(onlyOneChild.path)">
         <el-menu-item>
           <!-- <i :class="onlyOneChild.meta && onlyOneChild.meta.icon ? onlyOneChild.meta.icon : 'el-icon-location'"></i>
@@ -9,7 +9,7 @@
         </el-menu-item>
       </app-link>
     </template>
-    <el-submenu v-else>
+    <el-submenu v-else :index="resolvePath(item.path)">
       <template slot="title">
         <!-- <i :class="item.meta && item.meta.icon ? item.meta.icon : 'el-icon-location'"></i>
         <span slot="title">{{item.meta.title}}</span> -->
