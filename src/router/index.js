@@ -41,12 +41,8 @@ export const constantRoutes = [
   },
   {
     path: '/',
-    // redirect: 'home',
     name: 'Home',
     component: Layout,
-    // meta: {
-    //   title: 'ddd'
-    // }
   },
   {
     path: '/404',
@@ -123,6 +119,27 @@ export const constantRoutes = [
         name: 'PDF',
         meta: { title: 'PDF', icon: 'pdf' }
       }
+    ]
+  },
+  {
+    path: '/table',
+    component: Layout,
+    redirect: '/table/index',
+    meta: { title: 'table', icon: 'table' },
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/table/index'),
+        name: 'table',
+        meta: { title: 'table' }
+        
+      },
+      {
+        path: 'ots',
+        component: () => import('@/views/table/otsTable/index'),
+        name: 'otsTable',
+        meta: { title: 'otsTable' }
+      },
     ]
   },
   {

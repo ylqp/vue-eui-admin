@@ -29,7 +29,7 @@ router.beforeEach(async(to, form, next) => {
     } else {
       // 判断权限
       const hasRoles = store.getters.roles && store.getters.roles.length > 0
-      console.log(hasRoles + '------------------' + to.path)
+      // console.log(hasRoles + '------------------' + to.path)
       if (hasRoles) {
         next()
       } else {

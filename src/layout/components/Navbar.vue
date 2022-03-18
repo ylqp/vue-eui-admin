@@ -2,6 +2,7 @@
   <div class="navbar">
     <div class="nav-left">
       <Hamburger @toggleClick="toggleSideBar" :isActive="sidebar.opened"/>
+      <breadcrumb />
     </div>
     <div class="nav-right">
       <Search />
@@ -12,9 +13,11 @@
 <script>
 import { mapGetters } from 'vuex'
 import Hamburger from '@/components/Hamburger'
+import Breadcrumb from '@/components/Breadcrumb/index.vue'
 import Search from '@/components/Search'
 export default {
   components: {
+    Breadcrumb,
     Hamburger,
     Search
   },
@@ -44,5 +47,8 @@ export default {
     background-color: #fff;
     box-shadow: 0 1px 4px rgba(0,21,41,.08);
     justify-content: space-between;
+    .nav-left {
+      display: flex;
+    }
   }
 </style>

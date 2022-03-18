@@ -1,6 +1,9 @@
 <template>
   <section class="app-main">
-    <router-view />
+    <!-- vue过渡 -->
+    <transition name="fade-transform" mode="out-in">
+      <router-view />
+    </transition>
     <Copyright />
   </section>
 </template>

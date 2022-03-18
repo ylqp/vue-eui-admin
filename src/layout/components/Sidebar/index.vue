@@ -51,6 +51,20 @@ export default {
       return !this.sidebar.opened
     }
   },
+  created() {
+    // console.log('side---------------------------------created')
+  },
+  updated() {
+    // console.log('side---------------------------------updated')
+  },
+  mounted() {
+
+    // console.log(this.$router.getRoutes())
+    // console.log('side---------------------------------mounted')
+  },
+  beforeDestroy() {
+    // console.log('side---------------------------------beforeDestroy')
+  },
   methods: {
     handleOpen(key, keyPath) {
       console.log(key, keyPath);
