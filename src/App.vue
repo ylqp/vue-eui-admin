@@ -6,6 +6,10 @@
 
 <style lang="scss">
 @import "~@/styles/variables.scss";
+* {
+  margin: 0;
+  padding: 0;
+}
 html, body, #app{
   margin: 0;
   padding: 0;
