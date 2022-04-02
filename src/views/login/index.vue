@@ -63,9 +63,9 @@
           </h2>
           <div class="input-box">
             <input type="text" placeholder="用户名">
-            <input type="password" placeholder="密码">  
+            <input type="password" placeholder="密码" @keyup.enter.native="handleLogin">  
           </div>
-          <button>登录</button>
+          <button @click="handleLogin">登录</button>
         </div>
       </div>
     </div>

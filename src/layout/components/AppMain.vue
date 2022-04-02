@@ -2,7 +2,7 @@
   <section class="app-main">
     <!-- vue过渡 -->
     <transition name="fade-transform" mode="out-in">
-      <router-view />
+      <router-view class="content-box"/>
     </transition>
     <Copyright />
   </section>
@@ -18,9 +18,11 @@ export default {
 
 <style lang="scss" scoped>
 .app-main {
-  /* 50= navbar  50  */
-  min-height: calc(100vh - 50px);
+  min-height: 100%;
+  box-sizing: border-box;
   width: 100%;
   position: relative;
+  // Copyright 高度
+  padding-bottom: 40px;
 }
 </style>

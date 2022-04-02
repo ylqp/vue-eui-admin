@@ -74,6 +74,30 @@ export const constantRoutes = [
     ]
   },
   {
+    path: '/css',
+    component: Layout,
+    redirect: '/css/index',
+    meta: { title: 'cssExamples', icon: 'star' },
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/css/index'),
+        name: 'cssExamples',
+        meta: {
+          title: 'css-examples'
+        }
+      },
+      {
+        path: 'waterfall-flow',
+        component: () => import('@/views/css/waterfall-flow'),
+        name: 'waterfall-flow',
+        meta: {
+          title: 'waterfall-flow',
+        }
+      }
+    ]
+  },
+  {
     path: '/guide',
     component: Layout,
     redirect: '/guide/index',

@@ -8,7 +8,9 @@
           <Navbar />
           <tags-view v-if="needTagsView"></tags-view>
         </header>
-        <app-main />
+        <div class="content-container" :class=" needTagsView ? 'hasTags' : '' ">
+          <app-main />
+        </div>
         <right-panel v-if="showSettings">
           <settings />
         </right-panel>
@@ -57,6 +59,14 @@ export default {
   }
   .main-container {
     flex: 1;
+    .content-container{
+      /* 50= navbar  50  */
+      height: calc(100vh - 50px);
+      overflow: auto;
+      &.hasTags{
+        height: calc(100vh - 84px);
+      }
+    }
   }
 }
 </style>
