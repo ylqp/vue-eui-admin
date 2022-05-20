@@ -1,3 +1,24 @@
 a {
   text-decoration:none;
 }
+
+// $remVar: 0.01;
+// $i: 100;
+// @while $i > 0 {
+//   .mt#{$i} { margin-top:  #{$remVar * $i}rem; }
+//   .mb#{$i} { margin-bottom: #{$remVar * $i}rem; }
+//   .ml#{$i} { margin-left: #{$remVar * $i}rem; }
+//   .mr#{$i} { margin-right: #{$remVar * $i}rem; }
+//   $i: $i - 1;
+// }
+
+$remVar: 0.01;
+$i: 100;
+@while $i > 0 {
+  .mt#{$i} { margin-top:  #{$i}px; }
+  .mb#{$i} { margin-bottom: #{$i}px; }
+  .ml#{$i} { margin-left: #{$i}px; }
+  .mr#{$i} { margin-right: #{$i}px; }
+  .f#{$i} { font-size: #{$i}px; }
+  $i: $i - 1;
+}

@@ -8,6 +8,18 @@ $tiffany: #4AB7BD;
 $yellow:#FEC171;
 $panGreen: #30B08F;
 
+$default: #006AFF;
+$default-light: #EBF5FF;
+$warning: #ED6A0C;
+$warning-light: #FFF5ED;
+$danger: #D40000;
+$danger-light: #FFEBEB;
+$success: #2DA641;
+$success-light: #F0FAF2;
+
+$gray: #737780;
+$black: #363940;
+$balckQ: #666A77;
 // sidebar
 $menuText:#bfcbd9;
 $menuActiveText:#409EFF;
@@ -21,6 +33,15 @@ $subMenuHover:#001528;
 
 $sideBarWidth: 210px;
 
+.col_gray {
+    color: $gray;
+}
+.col_black {
+    color: $black;
+}
+.col_blackQ {
+    color: $balckQ;
+}
 :export {
     menuText: $menuText;
     menuActiveText: $menuActiveText;

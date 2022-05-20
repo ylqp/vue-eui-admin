@@ -5,6 +5,7 @@ Vue.use(VueRouter)
 
 // layout
 import Layout from '@/layout'
+import MobileLayout from '@/mobileLayout'
 
 // Router Modules
 
@@ -70,6 +71,22 @@ export const constantRoutes = [
         component: () => import('@/views/documentation/index'),
         name: 'Documentation',
         meta: { title: 'Documentation', icon: 'documentation', affix: true }
+      }
+    ]
+  },
+  {
+    path: '/plugin',
+    component: Layout,
+    redirect: '/plugin/index',
+    meta: { title: 'plugin', icon: 'skill'},
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/plugin/index'),
+        name: 'plugin',
+        meta: {
+          title: 'plugin'
+        }
       }
     ]
   },
@@ -144,6 +161,35 @@ export const constantRoutes = [
         meta: { title: 'PDF', icon: 'pdf' }
       }
     ]
+  },
+  {
+    path: '/mobile',
+    component: MobileLayout,
+    redirect: '/mobile/index',
+    name: 'mobile',
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/mobile/index'),
+        meta: { title: 'mobile', icon: 'pdf'}
+      },
+      {
+        path: 'camera',
+        component: () => import('@/views/mobile/camera'),
+        hidden: true
+      },
+      {
+        path: 'beforeCamera',
+        component: () => import('@/views/mobile/beforeCamera'),
+        hidden: true
+      },
+      {
+        path: 'faceLive',
+        component: () => import('@/views/mobile/faceLive'),
+        hidden: true
+      },
+    ]
+    
   },
   {
     path: '/table',

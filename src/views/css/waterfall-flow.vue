@@ -1,24 +1,21 @@
 <template>
   <div class="cantainer">
-    <div class="item" v-for="item in 15" :key="item">
+    <div class="item" v-for="item in 100" :key="item">
       <!-- <img src="" alt=""> -->
       <div :style="`height: ${Math.floor(Math.random()*100) + 50}px; background: #${Math.floor(Math.random()*(2<<23)).toString(16)}`">
         {{item}}
       </div>
       
     </div>
-    <div class="item" v-for="item in 15" :key="item">
-      <!-- <img src="" alt=""> -->
+    <!-- <div class="item" v-for="item in 15" :key="item">
       <div :style="`height: ${Math.floor(Math.random()*100) + 50}px; background: #${Math.floor(Math.random()*(2<<23)).toString(16)}`"></div>
     </div>
     <div class="item" v-for="item in 15" :key="item">
-      <!-- <img src="" alt=""> -->
       <div :style="`height: ${Math.floor(Math.random()*100) + 50}px; background: #${Math.floor(Math.random()*(2<<23)).toString(16)}`"></div>
     </div>
     <div class="item" v-for="item in 15" :key="item">
-      <!-- <img src="" alt=""> -->
       <div :style="`height: ${Math.floor(Math.random()*100) + 50}px; background: #${Math.floor(Math.random()*(2<<23)).toString(16)}`"></div>
-    </div>
+    </div> -->
   </div>
 </template>
 
