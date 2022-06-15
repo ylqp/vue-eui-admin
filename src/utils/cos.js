@@ -1,5 +1,5 @@
 import COS from "cos-js-sdk-v5"
-
+const aaa = 123
 const Bucket = 'ylqp-1302846440'  /* 存储桶 */
 const Region = 'ap-beijing'  /* 存储桶所在地域，必须字段 */
 // SecretId 和 SecretKey请登录 https://console.cloud.tencent.com/cam/capi 进行查看和管理
